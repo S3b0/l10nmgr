@@ -3,6 +3,13 @@
   "type": "typo3-cms-extension",
   "description": "Module for managing localization import and export",
   "homepage": "https://docs.typo3.org/typo3cms/extensions/l10nmgr/",
+  "authors": [
+    {
+      "name": "Stefano Kowalke",
+      "role": "Developer",
+      "homepage": "https://arroba-it.de"
+    }
+  ],
   "license": [
     "GPL-2.0-or-later"
   ],
@@ -20,6 +27,9 @@
     "issues": "https://forge.typo3.org/projects/extension-l10nmgr/issues"
   },
   "require": {
+    "ext-pdo": "*",
+	"ext-ftp": "*",
+	"ext-xml": "*",
     "typo3/cms-backend": "^10.4 || ^11.5",
     "typo3/cms-core": "^10.4 || ^11.5",
     "typo3/cms-fluid": "^10.4 || ^11.5",
@@ -33,6 +43,11 @@
   "autoload": {
     "psr-4": {
       "Localizationteam\\L10nmgr\\": "Classes"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Localizationteam\\L10nmgr\\Tests\\": "Tests"
     }
   },
   "config": {
